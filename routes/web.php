@@ -7,6 +7,7 @@ Route::post('user/addcontact', 'ContactController@store')->name('addContact');
 
 Route::get('searchstudents', 'Admin\StudentCrudController@dataAjax');
 
+Route::get('course/{course}/syllabus', 'CourseSkillController@exportCourseSyllabus')->name('exportCourseSyllabus');
 
 /* All routes should be protected by Backpack */
 Route::group(
